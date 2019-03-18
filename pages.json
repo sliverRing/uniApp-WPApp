@@ -1,16 +1,16 @@
 {
 	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
 		{
-			"path": "pages/index/index",
+			"path": "pages/index/index",//首页文件路径
 			"style": {
-				"navigationBarTitleText": "uni-app"
+				"navigationBarTitleText": "首页"//首页头部标题
 			}
 		}
 	],
 	"globalStyle": {
-		"navigationBarTextStyle": "black",
-		"navigationBarTitleText": "uni-app",
-		"navigationBarBackgroundColor": "#F8F8F8",
-		"backgroundColor": "#F8F8F8"
+		"navigationBarTextStyle": "white",//导航栏标题颜色（仅支持 black/white）
+		"navigationBarTitleText": "WPApp",//导航栏默认标题
+		"navigationBarBackgroundColor": "#000000;",//导航栏背景颜色，此处为黑色
+		"backgroundColor": "#F8F8F8"//页面背景颜色
 	}
 }
