@@ -19,6 +19,27 @@
 					</swiper>
 				</view>
 			</view>
+			<!-- 教程《用uni-app制作首页文章列表》首页文章列表模板代码 -->
+			<view class="page-section indexListBox">
+				<view class="indexList">
+					<image src="" mode=""></image>
+					<view class="title">
+						文章标题
+					</view>
+				</view>
+				<view class="indexList">
+					<image src="" mode=""></image>
+					<view class="title">
+						文章标题
+					</view>
+				</view>
+				<view class="indexList">
+					<image src="" mode=""></image>
+					<view class="title">
+						文章标题
+					</view>
+				</view>
+			</view>
 		</view>
 	</view>
 </template>
@@ -63,4 +84,21 @@
 	swiper-item image{
 		width: 100%;
 	}
+	/* 教程《用uni-app制作首页文章列表》首页文章列表css代码 */
+	.indexList uni-image {
+    width: 100%;
+    height: 130px;
+    background: #eaeaea;
+	}
+	.indexList {
+    margin-bottom: 15px;
+	}
+	.indexList .title {
+    background: #000;
+    color: #fff;
+    font-size: 16px;
+    line-height: 37px;
+    padding: 0 10px;
+	margin-top: -5px;
+}
 </style>
