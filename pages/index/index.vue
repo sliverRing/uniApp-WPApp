@@ -21,22 +21,11 @@
 			</view>
 			<!-- 教程《用uni-app制作首页文章列表》首页文章列表模板代码 -->
 			<view class="page-section indexListBox">
-				<view class="indexList">
-					<image src="" mode=""></image>
+				<!-- 教程 uni-app:渲染app的首页文章数据第四步:绑定渲染数据 -->
+				<view class="indexList" v-for="(item , index) in homePosts" :key="index">
+					<image :src="item.img" mode=""></image>
 					<view class="title">
-						文章标题
-					</view>
-				</view>
-				<view class="indexList">
-					<image src="" mode=""></image>
-					<view class="title">
-						文章标题
-					</view>
-				</view>
-				<view class="indexList">
-					<image src="" mode=""></image>
-					<view class="title">
-						文章标题
+						{{item.title}}
 					</view>
 				</view>
 			</view>
@@ -49,13 +38,15 @@
 		//此处为该页面需要用到的数据，在项目逻辑中可以对这些数据进行改变
 		data() {
 			return {
-				homeSlide: [] //教程uni-app渲染幻灯片数据第一步：定义值接收幻灯片数据
+				homeSlide: [] ,//教程uni-app渲染幻灯片数据第一步：定义值接收幻灯片数据
+				homePosts:[],//教程 uni-app:渲染app的首页文章数据第一步:定义一个值来接收文章列表
 			}
 		},
 		onLoad() {
-			
 			//教程uni-app渲染幻灯片数据第三步：执行方法getHomeSlide（）
 			this.getHomeSlideFunc();
+			//教程 uni-app:渲染app的首页文章数据第一步:将该方法加入onLoad中，使页面一加载的时候就获取文章列表
+			this.getHomePosts();
 		},
 		//此处为自定义方法
 		methods: {
@@ -68,6 +59,17 @@
 					success: (res) => {
 						// 请求成功之后将幻灯片数据赋值给homeSlide
 						_self.homeSlide=res.data.post;
+					}
+				});
+			},
+			// 教程 uni-app:渲染app的首页文章数据第一步:定义方法获取首页文章列表接口getHomePosts（）
+			getHomePosts(){
+				var _self = this;
+				uni.request({
+					url: 'http://appblog.inacorner.top/wp-content/themes/wpApp/api/indexList.php',//接口地址
+					success: (res) => {
+						// 请求成功之后将文章列表数据赋值给homePosts
+						_self.homePosts=res.data.post;
 					}
 				});
 			}
@@ -101,4 +103,7 @@
     padding: 0 10px;
 	margin-top: -5px;
 }
+   .indexListBox{
+	   margin-top: 20px;
+   }
 </style>
