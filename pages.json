@@ -6,17 +6,28 @@
 				"navigationBarTitleText": "首页" //首页头部标题
 			}
 		}
-	],
+	    ,{
+            "path" : "pages/find/find",
+            "style" : {
+				"navigationBarTitleText": "首页" //发现头部标题
+			}
+        }
+    ],
 	// 教程uni-app制作app底部导航栏
 	"tabBar": {
 		"color": "#a1a1a1", //tab 上的文字默认颜色，仅支持十六进制颜色
 		"selectedColor": "#FFFFFF", //tab 上的文字选中时的颜色，仅支持十六进制颜色
 		"borderStyle": "black", //tabbar上边框的颜色， 仅支持 black / white
 		"backgroundColor": "#000000", //tab 的背景色，仅支持十六进制颜色
-		"list": [{
+		"list": [
+			{
 			"pagePath": "pages/index/index",
 			"text": "首页"
-		}]
+		},{
+			"pagePath": "pages/find/find",
+			"text": "发现"
+		}
+		]
 	},
 	"globalStyle": {
 		"navigationBarTextStyle": "white", //导航栏标题颜色（仅支持 black/white）
