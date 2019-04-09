@@ -9,7 +9,7 @@
 	    ,{
             "path" : "pages/find/find",
             "style" : {
-				"navigationBarTitleText": "首页" //发现头部标题
+				"navigationBarTitleText": "发现" //发现头部标题
 			}
         }
     ],
