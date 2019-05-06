@@ -15,7 +15,13 @@
         ,{
             "path" : "pages/user/user",
             "style" : {
-				"navigationBarTitleText": "用户" //发现头部标题
+				"navigationBarTitleText": "用户" //用户头部标题
+			}
+        }
+        ,{
+            "path" : "pages/login/login",
+            "style" : {
+				"navigationBarTitleText": "登录" //登录头部标题
 			}
         }
     ],

@@ -14,7 +14,7 @@
 					<!-- 教程uni-app渲染幻灯片数据第三步：渲染数据 -->
 						<swiper-item v-for="(item , index) in homeSlide" :key="index">
 							<!-- uni img组件 src绑定值为服务端返回的数据中的文章缩略图 -->			
-							<image :src="item.img" mode="widthFix"></image>
+							<image :src="item.img" mode="aspectFill"></image>
 						</swiper-item>
 					</swiper>
 				</view>
@@ -23,7 +23,7 @@
 			<view class="page-section indexListBox">
 				<!-- 教程 uni-app:渲染app的首页文章数据第四步:绑定渲染数据 -->
 				<view class="indexList" v-for="(item , index) in homePosts" :key="index">
-					<image :src="item.img" mode="widthFix"></image>
+					<image :src="item.img" mode="aspectFill"></image>
 					<view class="title">
 						{{item.title}}
 					</view>
