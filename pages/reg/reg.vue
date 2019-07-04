@@ -5,7 +5,7 @@
 				<view class="uni-form-item uni-column">
 					<input class="uni-input" name="username" placeholder="请输入用户名……" />
 					<input class="uni-input" password="true" name="userpwd" placeholder="请输入登录密码……" />
-					<input class="uni-input" password="true" name="useremail" placeholder="请输入邮箱密码……" />
+					<input class="uni-input" password="true" name="useremail" placeholder="请输入邮箱账号……" />
 				</view>
 				<view class="uni-btn-v">
 					<button formType="submit" type="primary">注册</button>

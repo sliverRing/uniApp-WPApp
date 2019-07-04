@@ -27,7 +27,7 @@
         ,{
             "path" : "pages/reg/reg",
             "style" : {
-				"navigationBarTitleText": "登录" //注册页面的标题
+				"navigationBarTitleText": "注册" //注册页面的标题
 			}
         }
     ],
