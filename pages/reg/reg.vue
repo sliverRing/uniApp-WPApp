@@ -36,7 +36,7 @@
 						//请求值
 					     'user_name': formData.username,
 						  'user_pwd':formData.userpwd,
-						  'user_email:formData.useremail,
+						  'user_email':formData.useremail
 					},
 					//请求类型
 					method:'POST',
@@ -47,7 +47,7 @@
 					success: (res) => {
 						console.log(res.data)
 						if(res.data.status==2){
-							console.log("登录成功！");
+							console.log("注册成功！");
 						}else{
 							console.log(res)
 						}
