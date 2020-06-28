@@ -36,7 +36,7 @@
 		"color": "#a1a1a1", //tab 上的文字默认颜色，仅支持十六进制颜色
 		"selectedColor": "#FFFFFF", //tab 上的文字选中时的颜色，仅支持十六进制颜色
 		"borderStyle": "black", //tabbar上边框的颜色， 仅支持 black / white
-		"backgroundColor": "#000000", //tab 的背景色，仅支持十六进制颜色
+		"backgroundColor": "#795548", //tab 的背景色，仅支持十六进制颜色
 		"list": [
 			{
 			"pagePath": "pages/index/index",
@@ -53,7 +53,7 @@
 	"globalStyle": {
 		"navigationBarTextStyle": "white", //导航栏标题颜色（仅支持 black/white）
 		"navigationBarTitleText": "WPApp", //导航栏默认标题
-		"navigationBarBackgroundColor": "#000000;", //导航栏背景颜色，此处为黑色
+		"navigationBarBackgroundColor": "#795548", //导航栏背景颜色，此处为咖啡色
 		"backgroundColor": "#F8F8F8" //页面背景颜色
 	}
 }

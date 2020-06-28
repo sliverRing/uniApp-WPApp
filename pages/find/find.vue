@@ -11,7 +11,7 @@
 		<!-- 教程uni-app渲染发现界面第五步:渲染文章数据 -->
 		<view class="page-section postBox">
 			<view class="postList" v-for="(item , index) in postsData" :key="index">
-				<image mode="widthFix" :src="item.img"></image>
+				<image mode="center" :src="item.img"></image>
 				<view class="title">
 					{{item.title}}
 				</view>
@@ -72,26 +72,12 @@
     width: calc(98% / 3);
     text-align: center;
     line-height: 2;
-    background-color: #757575;
-    color: #cecece;
+    background-color: #795647;
+    color: #ffffff;
 }
 .postBox uni-image {
     width: 100%;
     height: 10rem;
     background: #eaeaea;
 	}
-.postList .title {
-	    background: #000;
-	    color: #fff;
-	    font-size: 16px;
-	    line-height: 37px;
-	    padding: 0 10px;
-		margin-top: -5px;
-	}
-.postList{
-	margin-bottom: 1rem;
-}
-.postList:last-child{ 
-margin-bottom: 0rem;
-}
 </style>

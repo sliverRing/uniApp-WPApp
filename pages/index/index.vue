@@ -23,7 +23,7 @@
 			<view class="page-section indexListBox">
 				<!-- 教程 uni-app:渲染app的首页文章数据第四步:绑定渲染数据 -->
 				<view class="indexList" v-for="(item , index) in homePosts" :key="index">
-					<image :src="item.img" mode="aspectFill"></image>
+					<image :src="item.img" mode="center"></image>
 					<view class="title">
 						{{item.title}}
 					</view>
@@ -86,24 +86,4 @@
 	swiper-item image{
 		width: 100%;
 	}
-	/* 教程《用uni-app制作首页文章列表》首页文章列表css代码 */
-	.indexList uni-image {
-    width: 100%;
-    height: 8rem !important;
-    background: #eaeaea;
-	}
-	.indexList {
-    margin-bottom: 15px;
-	}
-	.indexList .title {
-    background: #000;
-    color: #fff;
-    font-size: 16px;
-    line-height: 37px;
-    padding: 0 10px;
-	margin-top: -5px;
-}
-   .indexListBox{
-	   margin-top: 20px;
-   }
 </style>
