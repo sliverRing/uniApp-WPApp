@@ -23,6 +23,7 @@ page {
 	width: 100%;
 	height: 270rpx;
 	background: #eaeaea;
+	border-radius: 15rpx;
 }
 .indexList,.postList {
 	margin-bottom: 15rpx;

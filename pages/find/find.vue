@@ -75,6 +75,11 @@
     background-color: #795647;
     color: #ffffff;
 }
+.catList view,.tagList view{
+	font-size: 16rpx;
+	padding: 16rpx 0;
+	letter-spacing: 2rpx;
+}
 .postBox uni-image {
     width: 100%;
     height: 10rem;

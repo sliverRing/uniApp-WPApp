@@ -14,7 +14,7 @@
 					<!-- 教程uni-app渲染幻灯片数据第三步：渲染数据 -->
 						<swiper-item v-for="(item , index) in homeSlide" :key="index">
 							<!-- uni img组件 src绑定值为服务端返回的数据中的文章缩略图 -->			
-							<image :src="item.img" mode="aspectFill"></image>
+							<image :src="item.img" mode="center"></image>
 						</swiper-item>
 					</swiper>
 				</view>
@@ -78,12 +78,19 @@
 </script>
 
 <style>
+	.page-section.swiper{
+		background-color: #FFFFFF;
+		padding: 20rpx;
+	}
 	/* 将这组幻灯片中的子项目改成我们设计图中的灰色 */
 	swiper-item {
-		background-color: #f8f8f8;
+		overflow: hidden;
+		height: 270rpx;
 	}
 	/* 教程uni-app渲染幻灯片数据最后一步：美化 */
 	swiper-item image{
+		height: 100%;;
 		width: 100%;
+		border-radius: 15rpx;
 	}
 </style>
