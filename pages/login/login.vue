@@ -16,61 +16,76 @@
 </template>
 
 <script>
-	export default {
-		data() {
-			return {
+export default {
+	data() {
+		return {
 
-			};
-		},
-		methods: {
-			//uni-app 提交表单方法
-			formSubmit: function(e) {
-				//获取表单值
-				var formData = e.detail.value;
-				// 请求
-				uni.request({
-					//api地址
-					url: 'http://appblog.inacorner.top/wp-content/themes/wpApp/api/login.php',
-					data: {
-						//请求值
-					     'usaer_name': formData.username,
-						  'uuser_pwd':formData.userpwd
-					},
-					//请求类型
-					method:'POST',
-					//请求头
-					header: {
-						'content-type': 'application/x-www-form-urlencoded', 
-					},
-					success: (res) => {
-						console.log(res.data)
-						if(res.data.status==2){
-							console.log("登录成功！");
-						}else{
-							console.log(res)
-						}
+		};
+	},
+	methods: {
+		//uni-app 提交表单方法
+		formSubmit: function(e) {
+			//获取表单值
+			var formData = e.detail.value;
+			// 请求
+			uni.request({
+				//api地址
+				url: 'http://appblog.inacorner.top/wp-content/themes/wpApp/api/login.php',
+				data: {
+					//请求值
+				     'usaer_name': formData.username,
+					  'uuser_pwd':formData.userpwd
+				},
+				//请求类型
+				method:'POST',
+				//请求头
+				header: {
+					'content-type': 'application/x-www-form-urlencoded',
+				},
+				success: (res) => {
+					console.log(res.data)
+					if(res.data.code == 200){
+						//登录成功之后获取Token
+						uni.setStorage({
+							key:'token',
+							data:res.data.token,
+							success() {
+								//存储完Token之后再存储一下用户信息
+								uni.setStorage({
+									key:'user',
+									data:res.data.user_info,
+									success() {
+										//返回上一页
+										uni.navigateBack();
+									}
+								})
+							}
+						})
+					}else{
+						console.log(res)
 					}
-				});
-			}
+				}
+			});
 		}
 	}
+}
 </script>
 
 <style>
-	.sliverLoginPage {
-		padding: 20px 15px;
-	}
+.sliverLoginPage {
+	padding: 20px 15px;
+}
 
-	.sliverLogin uni-input {
-		background: #d8d8d8;
-		margin-bottom: 1rem;
-		padding: 0.5rem;
-		font-size: 0.8rem;
-		border-radius: 5px;
-		color: #424242;
-	}
+.sliverLogin uni-input {
+	background: #d8d8d8;
+	margin-bottom: 1rem;
+	padding: 0.5rem;
+	font-size: 0.8rem;
+	border-radius: 5px;
+	color: #424242;
+}
 
-	.sliverLogin .uni-btn-v button {
-		margin-bottom: .5rem;
-	}
+.sliverLogin .uni-btn-v button {
+	margin-bottom: 0.5rem;
+}
 </style>
