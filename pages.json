@@ -30,6 +30,12 @@
 				"navigationBarTitleText": "注册" //注册页面的标题
 			}
         }
+        ,{
+            "path" : "pages/read/read",
+            "style" : {
+				"navigationBarTitleText": "阅读" //注册页面的标题
+			}
+        }
     ],
 	// 教程uni-app制作app底部导航栏
 	"tabBar": {
